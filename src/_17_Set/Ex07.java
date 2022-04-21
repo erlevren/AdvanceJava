@@ -19,7 +19,27 @@ public class Ex07 {
 	 */
 
 	public static void main(String[] args) {
+		HashSet<Double> set = new HashSet<>();
+		setOlustur(set);            //mutable olduğu için tekrardan atama yapmaya gerek yok
+		System.out.println(set);
+		toplaminiAl(set);
+	}
 
+	private static void toplaminiAl(HashSet<Double> set) {
+		Double topla =0.0;
+		for (Double w : set){
+			topla +=w;
+		}
+		System.out.println(topla);
+	}
+
+	private static HashSet setOlustur(HashSet<Double> set) {
+		set.add(3.23);
+		set.add(3.10);
+		set.add(5.12);
+		set.add(10.12);
+		set.add(23.12);
+		return set;     //mutable olduğu için tekrardan atama yapmaya gerek yok
 
 	}
 }
